@@ -22,7 +22,7 @@ bigquery_sink_properties = {
     'credentials-file': '/path/to/your/credentials.json'
 }
 
-# Connect to Redoanda as a source
+# Connect to Redpanda as a source
 t_env.connect(Kafka().properties(redpanda_properties))
 source_table = t_env.from_kafka('dbserver1.inventory.customers', ['id', 'first_name', 'last_name' 'email'])
 
